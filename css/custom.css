@@ -17,6 +17,14 @@ span {
 }
 
 /* Classes */
+
+
+.btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light.active {
+    /* color: #fff; */
+    background-color: #faebc1;
+    border-color: #faebc1; /*set the color you want here*/
+}
+
 .btn-outline-success:hover {
     color: white;
     background-color: #198754c5;
@@ -62,6 +70,7 @@ span {
     justify-content: space-between;
     margin-right: 0;
 }
+
 
 .inactive {
     margin-left:-14rem;
@@ -116,6 +125,7 @@ span {
 #github {
     color: #DCDCDC;
     font-size: 2.3rem;
+    transition: all 0.2s;
 }
 
 #githuba {
@@ -123,16 +133,19 @@ span {
 }
 
 #githuba:hover > #github {
-    color: #A7F432;
+    color: #00ff80;
+    font-size: 2.64rem;
 }
 
 #linkedin {
     color: #DCDCDC;
     font-size: 2.5rem;
+    transition: all 0.2s;
 }
 
 #linkedina:hover > #linkedin {
-    color: #A7F432;
+    color: #00ff80;
+    font-size: 2.875rem;
 }
 
 #load {
