@@ -26,7 +26,17 @@ btn.addEventListener('click', function (e) {
     }
 });
 
-var host = [`codechef.com`, `codeforces.com`];
+var host;
+if (localStorage.getItem('hosts') === null) {
+	host = [`codechef.com`, `codeforces.com`];
+	document.getElementById('btncheck2').checked = true;
+	document.getElementById('btncheck1').checked = true;
+} else {
+	host = JSON.parse(localStorage.getItem('hosts'));
+	host.forEach(function (name) {
+		document.getElementsByName(`${name}`)[0].checked = true;
+	})
+}
 var hosts = `codechef.com%2Ccodeforces.com%2Cgeeksforgeeks.org%2Chackerearth.com%2Cleetcode.com%2Ctopcoder.com%2Catcoder.jp%2Ccodingcompetitions.withgoogle.com`;
 
 
@@ -34,6 +44,11 @@ var now = new Date();
 const nowString = (now.toISOString().substring(0, 11) + now.toISOString().substring(11, 19));
 
 var today = false;
+var todayStart = new Date();
+todayStart.setDate(todayStart.getDate() - 32);
+todayStart.setHours(00, 00, 00);
+
+var todayStartString = (todayStart.toISOString().substring(0, 11) + todayStart.toISOString().substring(11, 19));
 var tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 tomorrow.setHours(00, 00, 00);
@@ -45,9 +60,10 @@ function display() {
 	var inner = ``;
 	
 	apiData.data.objects.forEach(function (contest) {
-		var contStart = new Date(contest.start);
+		var contStart = new Date(contest.start + `.000Z`);
+		var contEnd = new Date(contest.end  + `.000Z`);
 		if (today) {
-			if (host.includes(contest.resource) && contStart < tomorrow && contest.duration <= 864000) {
+			if (host.includes(contest.resource) && contEnd > now && contStart < tomorrow) {
 				const minutes = (parseInt(contest.duration) / 60) % 60;
 				const hours = parseInt((parseInt(contest.duration) / 3600) % 24);
 				const days = parseInt((parseInt(contest.duration) / 3600) / 24);
@@ -132,7 +148,7 @@ function display() {
 }
 
 async function callAPI() {
-    const response = await fetch(apiURL + `&resource=${hosts}&end__gt=${nowString}`);
+    const response = await fetch(apiURL + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
     const data = await response.json();
     
     return {
@@ -154,6 +170,7 @@ function addEventListeners() {
 				}
 			}
 			display();
+			localStorage.setItem('hosts', JSON.stringify(host));
 		});
 	}
 
@@ -170,12 +187,11 @@ function addEventListeners() {
 	}
 }
 
-// Store the API response in Local Storage for later use (Updates on daily basis)
 var todayStart = new Date();
 todayStart.setHours(00, 00, 00);
 
-if (localStorage.getItem("contests") === null || localStorage.getItem("timeStamp") < todayStart) {
-	console.log("Called api");
+const TS = new Date(localStorage.getItem("timeStamp"));
+if (localStorage.getItem("contests") === null || TS < todayStart) {
 	callAPI()
 		.then(data => {
 			apiData = data;		
@@ -186,10 +202,8 @@ if (localStorage.getItem("contests") === null || localStorage.getItem("timeStamp
 			addEventListeners();
 		})
 } else {
-	console.log("Fetched from Local Storage")
 	addEventListeners();
 	apiData = JSON.parse(localStorage.getItem("contests"));
-	console.log(apiData);
 	display();
 }
 
