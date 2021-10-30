@@ -8,12 +8,11 @@ For those who're new to this project, it's a Chrome Extension that helps you get
 
 # Download 
 
+## Google Chrome
+If you're a Chrome user, you are just one click away from using CP Calendar - [Add to Chrome](https://chrome.google.com/webstore/detail/cp-calendar/nahdeimiheknmpknkenfkmhonnlboeim?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5&gclid=CjwKCAjw2vOLBhBPEiwAjEeK9sn-nQBDNKppMZhWHWbSVvTFkEdTD64re943EtKxB8k_20hRn2vPhhoC_S8QAvD_BwE).
+
 ## FIREFOX 
-If you're a Firefox user, you can download CP Calendar zip file from [here](https://github.com/nishanthvijayan/CoderCalendar-Extensions/releases/latest). To install it, follow these instuctions:
-  
- 1. Open `about:debugging` in a new tab
- 2. Select `Load Temporary Add-on` option
- 3. Select any file from the extracted release zip file you downloaded
+Will be updating soon!
 
 # Detailed Description
 - This extension uses the [CLIST API](https://www.clist.by).
