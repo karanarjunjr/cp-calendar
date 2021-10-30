@@ -7,7 +7,6 @@
     "default_popup": "index.html",
     "default_icon": "logo/128.png"
   },
-  "permissions": ["storage"],
   "icons": {
     "128": "logo/128.png",
     "48": "logo/48.png",
