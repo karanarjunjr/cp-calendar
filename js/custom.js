@@ -52,6 +52,7 @@ var todayStartString = (todayStart.toISOString().substring(0, 11) + todayStart.t
 var tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 tomorrow.setHours(00, 00, 00);
+const apiURL2 = `https://boiling-sea-29091.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
 const apiURL = `https://mighty-temple-90200.herokuapp.com/https://clist.by:443/api/v2/contest/?username=karanarjunjr&api_key=32b0dc3d2ed2ee0e8ad5eb7dfe37c47e4da8abb4&format=json&order_by=start`;
 
 var apiData;
@@ -148,12 +149,21 @@ function display() {
 }
 
 async function callAPI() {
-    const response = await fetch(apiURL + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
-    const data = await response.json();
-    
-    return {
-        data
-    }
+	try {
+		const response = await fetch(apiURL + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
+		const data = await response.json();
+
+		return {
+			data
+		}
+	} catch {
+		const response = await fetch(apiURL2 + `&resource=${hosts}&end__gt=${nowString}&start__gt=${todayStartString}`);
+		const data = await response.json();
+
+		return {
+			data
+		}
+	}
 }
 
 function addEventListeners() {
