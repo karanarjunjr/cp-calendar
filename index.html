@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <!-- <script src="js/fontawesome.min.js"></script> -->
+    <script src="js/fontawesome.js"></script>
+  </head>
+
+  <body class="bg-dark">
+    <div class="vertical-nav bg-gray inactive" id="sidebar">
+      <div
+        class="btn-group-vertical checks"
+        role="group"
+        aria-label="Basic checkbox toggle button group"
+      >
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btncheck7"
+          name="atcoder.jp"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-success btn-lg" for="btncheck7"
+          >Atcoder</label
+        >
+
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btncheck2"
+          name="codechef.com"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-success btn-lg" for="btncheck2"
+          >CodeChef</label
+        >
+
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btncheck1"
+          name="codeforces.com"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-success btn-lg" for="btncheck1"
+          >Codeforces</label
+        >
+
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btncheck3"
+          name="geeksforgeeks.org"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-success btn-lg" for="btncheck3"
+          >GeeksForGeeks</label
+        >
+
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btncheck4"
+          name="naukri.com/code360"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-success btn-lg" for="btncheck4"
+          >Naukri.com</label
+        >
+
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btncheck6"
+          name="leetcode.com"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-success btn-lg" for="btncheck6"
+          >Leetcode</label
+        >
+
+        <input
+          type="checkbox"
+          class="btn-check"
+          id="btncheck8"
+          name="topcoder.com"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-success btn-lg" for="btncheck8"
+          >Topcoder</label
+        >
+      </div>
+
+      <div
+        class="btn-group-vertical checks2"
+        role="group"
+        aria-label="Vertical radio toggle button group"
+      >
+        <input
+          type="radio"
+          class="btn-check"
+          name="radio"
+          id="btncheck9"
+          autocomplete="off"
+        />
+        <label class="cbox btn btn-outline-danger btn-lg" for="btncheck9"
+          >Today</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="radio"
+          id="btncheck10"
+          autocomplete="off"
+          checked
+        />
+        <label class="cbox btn btn-outline-danger btn-lg" for="btncheck10"
+          >Upcoming</label
+        >
+      </div>
+    </div>
+
+    <div id="rest" class="whenBarInActive">
+      <!-- Filter button -->
+      <div id="top" class="mx-4 my-4">
+        <button id="toggle" class="btn btn-lg btn-danger" disabled>
+          Filter
+        </button>
+
+        <div id="contact">
+          <button
+            class="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            id="coffeeb"
+          >
+            <i id="coffee" class="fa-solid fa-mug-saucer"></i>
+          </button>
+          <a
+            id="githuba"
+            href="https://github.com/karanarjunjr/cp-calendar"
+            target="_blank"
+            ><i id="github" class="fa-brands fa-github"></i
+          ></a>
+          <a
+            id="linkedina"
+            href="https://www.linkedin.com/in/arjunjsastra/"
+            target="_blank"
+            ><i id="linkedin" class="fa-brands fa-linkedin"></i
+          ></a>
+          <!-- Button trigger modal -->
+        </div>
+      </div>
+
+      <!-- The main body -->
+      <div id="tableContent">
+        <p id="load">Compiling...</p>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-6" id="exampleModalLabel">
+                Enjoyed the extension? <br />Buy me a coffee to show your
+                support!
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img class="paytm" src="images/paytm.JPG" alt="codechef" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

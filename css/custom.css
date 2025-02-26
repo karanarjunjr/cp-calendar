@@ -1,0 +1,261 @@
+/* Elements */
+body {
+  /* position: fixed; */
+  width: 750px;
+  height: 600px;
+}
+
+p {
+  margin: 0;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Classes */
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light.active {
+  /* color: #fff; */
+  background-color: #faebc1;
+  border-color: #faebc1; /*set the color you want here*/
+}
+
+.btn-outline-success:hover {
+  color: white;
+  background-color: #198754c5;
+  border-color: #198754c5;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #dc3546cc;
+  border-color: #dc3546cc;
+}
+
+.btn:active,
+.btn:focus,
+.btn.active,
+.btn:active:focus {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.checks {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  height: 67%;
+}
+
+.checks2 {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  height: 20%;
+}
+
+.contest {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0;
+}
+
+.inactive {
+  margin-left: -14rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-nav {
+  min-width: 14rem;
+  width: 14rem;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.8s;
+  display: flex;
+  flex-direction: column;
+}
+
+.whenBarActive {
+  width: calc(100% - 14rem);
+  margin-left: 14rem;
+}
+
+.whenBarInActive {
+  width: 100%;
+}
+
+.paytm {
+  max-width: 14rem;
+  max-height: 14rem;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+/* IDs */
+#contact {
+  position: fixed;
+  right: 35px;
+  top: 34px;
+  display: flex;
+  justify-self: right;
+  /* align-items: center; */
+}
+
+#coffee {
+  color: #dcdcdc;
+  font-size: 2.3rem;
+  transition: all 0.2s;
+}
+
+#coffeeb {
+  margin-right: 20px;
+  padding: 0;
+}
+
+#coffeeb:hover > #coffee {
+  color: #00ff80;
+  font-size: 2.64rem;
+}
+
+#github {
+  color: #dcdcdc;
+  font-size: 2.3rem;
+  transition: all 0.2s;
+}
+
+#githuba {
+  margin-right: 20px;
+}
+
+#githuba:hover > #github {
+  color: #00ff80;
+  font-size: 2.64rem;
+}
+
+#linkedin {
+  color: #dcdcdc;
+  font-size: 2.5rem;
+  transition: all 0.2s;
+}
+
+#linkedina:hover > #linkedin {
+  color: #00ff80;
+  font-size: 2.875rem;
+}
+
+#load {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  font-size: 3rem;
+}
+
+#load1 {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  font-size: 3rem;
+}
+
+#load2 {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  font-size: 2rem;
+}
+
+#load3 {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  font-size: 2rem;
+}
+
+#tableContent {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  overflow-y: scroll;
+  margin-bottom: 30px;
+}
+
+#toggle {
+  position: relative;
+  width: 10rem;
+  justify-self: left;
+}
+
+#top {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 690.4px;
+}
+
+#rest {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  transition: all 0.8s;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #212529;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dc3546cc;
+}
